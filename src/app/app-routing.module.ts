@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NoPageFoundComponent } from './core/no-page-found/no-page-found.component';
-
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
+    loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
   },
-  { path: '**', component: NoPageFoundComponent },
+  {
+    path: '**',
+    loadChildren: () => import('./core/core.module').then(m => m.CoreModule)
+  },
 ];
 
 @NgModule({

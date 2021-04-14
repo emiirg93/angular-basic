@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+import { CoreRoutingModule } from './core-routing.module';
 
 
 
@@ -13,7 +14,8 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
     NoPageFoundComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CoreRoutingModule
   ],
   exports: [
     FooterComponent,
